@@ -1,0 +1,110 @@
+        html,
+        body {
+            height: 100%;
+        }
+        /* Navigation*/
+        
+        .navbar {
+            opacity: 25%;
+        }
+        
+        .top-nav-collapse {
+            background-color: #394251;
+            background
+        }
+        
+        footer.page-footer {
+            background-color: #394251;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .navbar {
+                background-color: #394251;
+            }
+        }
+        
+        .scrolling-navbar {
+            -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            transition: background .5s ease-in-out, padding .5s ease-in-out;
+        }
+        /* Carousel*/
+        
+        .carousel {
+            height: 85%;
+        }
+        
+        .carousel2 {
+            height: 100%;
+        }
+        
+        @media (max-width: 776px) {
+            .carousel {
+                height: 100%;
+            }
+        }
+        
+        .carousel-item,
+        .active {
+            height: 100%;
+        }
+        
+        .carousel-inner {
+            height: 100%;
+        }
+        /*Caption*/
+        
+        .flex-center {
+            color: #fff;
+        }
+        
+        .button {
+            border-radius: 1px;
+            background-color: #394251;
+            border-style: solid;
+            border-width: 1px;
+            border-color: white;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 22px;
+            padding: 20px;
+            width: 170px;
+            transition: all 0.9s;
+            cursor: pointer;
+            margin: 5px;
+            border-radius: 12px;
+        }
+        
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.9s;
+        }
+        
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+        
+        .button:hover span {
+            padding-right: 15px;
+        }
+        
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+        
+        #container {
+            margin: auto;
+            width: 50%;
+            border: 3px solid white;
+            padding: 10px;
+            background-color: black;
+            opacity: .8;
+        }
