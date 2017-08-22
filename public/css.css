@@ -1784,15 +1784,14 @@ a {
 .header-container {
     text-align: center;
     color: #ffffff;
-    background: url(top.jpg) no-repeat center center;
+    background: url(top.jpg);
+    /* Set a specific height */
+    height: 500px;
+    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 600px;
-    margin: 0 auto;
-    max-height: 75vh;
-    background-size: auto;
 }
 
 @font-face {
@@ -1802,9 +1801,4 @@ a {
 
 .zach {
     font-family: 'typewriter';
-}
-
-.w3-hide-small2 {
-    background: url(top.jpg) no-repeat center center;
-    height: 300px;
 }

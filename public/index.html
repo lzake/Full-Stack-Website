@@ -266,6 +266,20 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="validator.js"></script>
     <script src="contact.js"></script>
+    <script type="text/javascript">
+        // Track position
+        var pos;
+
+        // On scroll update position
+        document.body.addEventListener("scroll", function() {
+            pos = document.body.scroll;
+        }, true);
+
+        // On rotation apply the scroll position
+        window.addEventListener("orientationchange", function() {
+            document.body.scroll = pos;
+        }, true);
+    </script>
 </body>
 
 </html>
