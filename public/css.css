@@ -580,7 +580,7 @@ a {
     width: auto;
     border: none;
     outline: none;
-    display: block
+    /* display: block */
 }
 
 .w3-bar .w3-dropdown-hover,
@@ -1784,7 +1784,7 @@ a {
 .header-container {
     text-align: center;
     color: #ffffff;
-    background: url(top.jpg);
+    background: url(mount.jpg);
     /* Set a specific height */
     height: 500px;
     /* Create the parallax scrolling effect */
@@ -1801,4 +1801,8 @@ a {
 
 .zach {
     font-family: 'typewriter';
+}
+
+.x-content-band.parallax {
+    -webkit-overflow-scrolling: touch;
 }

@@ -46,12 +46,6 @@
         }
     </style>
     <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-        <!-- Avatar image in top left corner -->
-        <!-- <img src="zach.png" style="width:100%">
-        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
-            <i class="fa fa-home w3-xxlarge"></i>
-            <p>HOME</p>
-        </a> -->
         <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
             <i class="fa fa-user w3-xxlarge"></i>
             <p>About Zach</p>
@@ -95,7 +89,7 @@
     <!-- Page Content -->
 
     <div class="w3-padding-large" id="main">
-        <div id="intro" class="header-container w3-hide-small2">
+        <div id="intro" class="header-container x-content-band">
             <div class="w3-display-middle zach" style="white-space:nowrap;">
                 <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"> <span class="w3-hide-small">I'm </span>Zach Lowe</span>
                 <br><br>
@@ -112,11 +106,11 @@
         <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
 
 
-            <img src="zach.png" alt="boy" width="auto" height="508px" style="padding-top:25px ">
+            <img src="zach.png" alt="boy" width="auto" height="300px" style="padding-top:25px" id="me">
         </header>
 
         <!-- About Section -->
-        <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+        <div class="w3-content w3-justify w3-text-grey w3-padding-16" id="about">
             <h2 class="w3-text-light-grey">&#36;whoami</h2>
             <hr style="width:200px" class="w3-opacity">
             <p>Junior Software Dev encompassing the idea that breadth of experience translates into a wealth of knowledge. I hold an active Security Clearance- Secret with the ability to raise to TS-SCI.<span class="w3-hide-small"> <br><br>I have been commended for my success in handling
@@ -279,6 +273,15 @@
         window.addEventListener("orientationchange", function() {
             document.body.scroll = pos;
         }, true);
+    </script>
+    <script>
+        $(window).load(function() {
+            $('body').delay(2500)
+                .animate({
+                    'scrollTop': $('#me').offset().top
+                }, 4000);
+
+        });
     </script>
 </body>
 
