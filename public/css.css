@@ -1105,13 +1105,18 @@ a {
     }
 }
 
-.w3-animate-opacity {
-    animation: opac 5s
+#op1,
+#op2 {
+    display: none
 }
 
-.w3-animate-opacity2 {
-    animation: opac 10s
-}
+
+/* .w3-animate-opacity2 {
+    opacity: 0;
+    animation: opac 3s;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+} */
 
 @keyframes opac {
     from {
@@ -1784,9 +1789,9 @@ a {
 .header-container {
     text-align: center;
     color: #ffffff;
-    background: url(mount.jpg);
+    background: url(mount1.png);
     /* Set a specific height */
-    height: 500px;
+    height: 80vh;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
@@ -1803,6 +1808,6 @@ a {
     font-family: 'typewriter';
 }
 
-.x-content-band.parallax {
+.x-content-band {
     -webkit-overflow-scrolling: touch;
 }

@@ -91,9 +91,10 @@
     <div class="w3-padding-large" id="main">
         <div id="intro" class="header-container x-content-band">
             <div class="w3-display-middle zach" style="white-space:nowrap;">
-                <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"> <span class="w3-hide-small">I'm </span>Zach Lowe</span>
-                <br><br>
-                <span class="w3-center w3-padding-large w3-black w3-medium w3-wide w3-animate-opacity2"> <span class="w3-hide-small">The</span> programmer<span class="w3-hide-small"> you've been looking for.</span></span>
+                <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide" id="op1"> <span class="w3-hide-small">I'm </span>Zach Lowe</span>
+                <br><br></div>
+            <div class="w3-display-middle zach" style="white-space:nowrap;">
+                <span class="w3-center w3-padding-large w3-black w3-medium w3-wide" id="op2"> <span class="w3-hide-small">The</span> programmer<span class="w3-hide-small"> you've been looking for.</span></span>
                 <!-- <br><br><br><br>
                 <span class="w3-center w3-padding-large w3-black w3-medium w3-wide w3-animate-opacity2">Scroll Down</span> -->
 
@@ -228,8 +229,13 @@
 
             <div class="w3-section">
                 <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Denver, Colorado US</p>
-                <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> <span class="w3-hide-small">Phone: </span>(719) 289-2023</p>
-                <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> <span class="w3-hide-small">Email: </span>zachariah.lowe@gmail.com<span class="w3-hide-small">&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;lowezake@gmail.com</span></p>
+
+                <p><a href="tel:719-289-2023" style="text-decoration:none"><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> <span class="w3-hide-small">Phone: </span>(719) 289-2023</a></p>
+
+                <p><a href="mailto:zachariahlowe@gmail.com?Subject=Hello" target="_top" style="text-decoration:none"><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i></a>
+                    <span class="w3-hide-small">Email: </span><a href="mailto:zachariahlowe@gmail.com?Subject=Hello" target="_top" style="text-decoration:none">zachariah.lowe@gmail.com</a>
+                    <span class="w3-hide-small">&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:lowezake@gmail.com?Subject=Hello" target="_top" style="text-decoration:none">lowezake@gmail.com</a></span>
+                </p>
             </div><br>
             <p><span class="w3-hide-small">Lets get in touch. </span>Send me a message<span class="w3-hide-small"> using the form below:</span></p>
 
@@ -276,11 +282,22 @@
     </script>
     <script>
         $(window).load(function() {
-            $('body').delay(2500)
+            $('body').delay(3300)
                 .animate({
                     'scrollTop': $('#me').offset().top
-                }, 4000);
+                }, 2000);
+            $('#op1').fadeIn(3000);
+            $('#op2').delay(2000).fadeIn(1500)
 
+        });
+    </script>
+    <script>
+        $(document).on('click', 'a', function(event) {
+            event.preventDefault();
+
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 1000);
         });
     </script>
 </body>
