@@ -239,15 +239,45 @@
             </div><br>
             <p><span class="w3-hide-small">Lets get in touch. </span>Send me a message<span class="w3-hide-small"> using the form below:</span></p>
 
-            <form action="send_form_email.php" method="post" role="form" id="form">
-                <p><input class="w3-input w3-padding-16" type="text" placeholder="Who you are" required name="Name"></p>
-                <p><input class="w3-input w3-padding-16" type="text" placeholder="Email to contact you" required name="Email"></p>
-                <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject ... " required name="Subject"></p>
-                <p><input class="w3-input w3-padding-16" type="text" placeholder="Message ... " required name="Message"></p>
-                <p>
-                    <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-                      <i class="fa fa-paper-plane"></i>&nbsp;&nbsp;SEND MESSAGE TO ZACH</button>
-                </p>
+            <form class="form-horizontal" role="form" method="post" action="index.php">
+                <div class="form-group">
+                    <label for="name" class="col-sm-2 control-label">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="<?php echo htmlspecialchars($_POST['name']); ?>">
+                        <?php echo "<p class='text-danger'>$errName</p>";?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="<?php echo htmlspecialchars($_POST['email']); ?>">
+                        <?php echo "<p class='text-danger'>$errEmail</p>";?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message" class="col-sm-2 control-label">Message</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" rows="4" name="message"><?php echo htmlspecialchars($_POST['message']);?></textarea>
+                        <?php echo "<p class='text-danger'>$errMessage</p>";?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="human" name="human" placeholder="Your Answer">
+                        <?php echo "<p class='text-danger'>$errHuman</p>";?>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-10 col-sm-offset-2">
+                        <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-10 col-sm-offset-2">
+                        <?php echo $result; ?>
+                    </div>
+                </div>
             </form>
 
             <!-- End Contact Section -->
@@ -262,10 +292,7 @@
 
         <!-- END PAGE CONTENT -->
     </div>
-    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="validator.js"></script>
-    <script src="contact.js"></script>
+
 </body>
 
 </html>
