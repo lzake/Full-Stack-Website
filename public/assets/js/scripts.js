@@ -1,24 +1,13 @@
 $(document).ready(function () {
-
-	/*============================================
-	Page Preloader
-	==============================================*/
-
 	$(window).load(function () {
 		$('#page-loader').fadeOut(500, function () {
 			loadGmap();
 		});
 
 	})
-
-	/*============================================
-	Color options
-	==============================================*/
-
 	$('#color-options .color').click(function () {
 		var color1 = $(this).data("color1");
 		var color2 = $(this).data("color2");
-		//alert(color1+" - "+color2);
 		$('#home h1, #home h2').css('background', color1);
 		$('.orange').css('color', color1);
 		$('#about .timeline div i').css('background', color1);
@@ -35,16 +24,9 @@ $(document).ready(function () {
 
 		var css = '<style type="text/css">#main-nav.scrolled .nav li.active a, #main-nav.scrolled .nav a:hover {color:' + color1 + ';} #filter-works ul li.active a, #filter-works ul li:hover a{color:' + color1 + '}#contact .contact-list a:hover{color:' + color1 + '}</style>'
 		$('head').append(css);
-		//$('#main-nav.scrolled .nav li.active a, #main-nav.scrolled .nav a:hover').css('color',color1);
-		//$('#filter-works ul li.active a, #filter-works ul li:hover a').css('color',color1);
-		//$('#contact .contact-list a:hover').css('color',color1);
-
-
 		$('#home p').css('background', color2);
 		$('.bg2').css('background', color2);
 		$('.modal-header h4 span').css('background', color2);
-
-
 		var $chart = $(".chart");
 		$chart.data('easy-pie-chart', null);
 		$chart.easyPieChart({
@@ -59,11 +41,6 @@ $(document).ready(function () {
 			}
 		});
 	});
-
-	/*============================================
-	Header
-	==============================================*/
-
 	$('#home').height($(window).height() + 50);
 
 	$.backstretch('assets/images/header-bg.jpg');
@@ -102,11 +79,6 @@ $(document).ready(function () {
 	$('#home .container').css({
 		'opacity': (1.6 - st / 400)
 	});
-
-
-	/*============================================
-	Navigation Bar
-	==============================================*/
 	if ($(window).scrollTop() < ($(window).height() - 35)) {
 		$('#main-nav').removeClass('scrolled');
 	} else {
@@ -120,10 +92,6 @@ $(document).ready(function () {
 			$('#main-nav').addClass('scrolled');
 		}
 	});
-
-	/*============================================
-	Navigation Links
-	==============================================*/
 	$("#main-nav a").click(function () {
 		element = $(this).attr('href');
 		$('html, body').animate({
@@ -134,16 +102,12 @@ $(document).ready(function () {
 		}
 		return false;
 	});
-
-	/*============================================
-	About Picture
-	==============================================*/
 	var controller;
 	$(document).ready(function ($) {
 		if ($(window).width() > 769) {
-			// init controller
+
 			controller = new ScrollMagic();
-			// build scene
+
 			var timelineheight = $('.timeline').outerHeight(true) - 600;
 			var scene = new ScrollScene({
 					triggerElement: "#trigger1",
@@ -155,9 +119,6 @@ $(document).ready(function () {
 		}
 	});
 
-	/*============================================
-	Skills
-	==============================================*/
 	var colorval = $('.hello h1').css('backgroundColor');
 	var parts = colorval.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
 	delete(parts[0]);
@@ -206,12 +167,6 @@ $(document).ready(function () {
 		}
 	});
 
-
-
-
-	/*============================================
-	Project thumbs
-	==============================================*/
 	$(window).load(function () {
 
 		$('#projects-container').css({
@@ -251,91 +206,38 @@ $(document).ready(function () {
 		});
 
 	});
-	// Select all links with hashes
+
 	$('a[href*="#"]')
-		// Remove links that don't actually link to anything
+
 		.not('[href="#"]')
 		.not('[href="#0"]')
 		.click(function (event) {
-			// On-page links
+
 			if (
 				location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
 				location.hostname == this.hostname
 			) {
-				// Figure out element to scroll to
+
 				var target = $(this.hash);
 				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-				// Does a scroll target exist?
+
 				if (target.length) {
-					// Only prevent default if animation is actually gonna happen
+
 					event.preventDefault();
 					$('html, body').animate({
 						scrollTop: target.offset().top
 					}, 1000, function () {
-						// Callback after animation
-						// Must change focus!
+
 						var $target = $(target);
 						$target.focus();
-						if ($target.is(":focus")) { // Checking if the target was focused
+						if ($target.is(":focus")) {
 							return false;
 						} else {
-							$target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-							$target.focus(); // Set focus again
+							$target.attr('tabindex', '-1');
+							$target.focus();
 						};
 					});
 				}
 			}
 		});
-	/*============================================
-	Contact Map
-	==============================================*/
-	// function loadGmap(){
-	//
-	// if($('#gmap').length){
-	//
-	// 	var map;
-	// 	var mapstyles = [ { "stylers": [ { "saturation": -100 } ] } ];
-	//
-	// 	var infoWindow = new google.maps.InfoWindow;
-	//
-	// 	var pointLatLng = new google.maps.LatLng(mapPoint.lat, mapPoint.lng);
-	//
-	// 	var mapOptions = {
-	// 		zoom: mapPoint.zoom,
-	// 		center: pointLatLng,
-	// 		zoomControl : true,
-	// 		panControl : false,
-	// 		streetViewControl : false,
-	// 		mapTypeControl: false,
-	// 		overviewMapControl: false,
-	// 		scrollwheel: false,
-	// 		styles: mapstyles
-	// 	}
-	//
-	// 	map = new google.maps.Map(document.getElementById("gmap"), mapOptions);
-	// 	map2 = new google.maps.Map(document.getElementById("gmapMobil"), mapOptions);
-	//
-	// 	var marker = new google.maps.Marker({
-	// 		position: pointLatLng,
-	// 		map: map,
-	// 		icon: mapPoint.icon
-	// 	});
-	//
-	//       var marker2 = new google.maps.Marker({
-	// 		position: pointLatLng,
-	// 		map: map2,
-	// 		icon: mapPoint.icon
-	// 	});
-	//
-	// 	var mapLink = 'https://www.google.com/maps/preview?ll='+mapPoint.lat+','+mapPoint.lng+'&z=14';
-	//       $("#mapLink").attr("href", mapLink);
-	//
-	//
-	// }
-	// }
-	//
-
-
-
-
 });
