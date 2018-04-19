@@ -1,7 +1,3 @@
-/*-----------------------
------ Basic Styles -----
--------------------------*/
-
 body {
     font-family: Arial, sans-serif;
     font-size: 14pt;
@@ -26,11 +22,6 @@ a:focus,
     outline: none;
 }
 
-
-/*-----------------------
------ Typo Styles ------
--------------------------*/
-
 h1,
 h2,
 h3,
@@ -49,7 +40,6 @@ h6,
 .big-text {
     font-size: 42pt;
     font-weight: 500;
-    /* text-transform: uppercase; */
     line-height: 62px;
     letter-spacing: 0.01em;
     word-spacing: 0.15em;
@@ -73,10 +63,6 @@ h6,
 }
 
 
-/*-----------------------
------ Color Styles ------
--------------------------*/
-
 .bg1 {
     color: #6D6D85;
     background: #fff;
@@ -92,9 +78,6 @@ h6,
 }
 
 
-/*------------------
------ Buttons ------
---------------------*/
 
 .btn-color1 {
     padding: 10px 30px;
@@ -118,9 +101,6 @@ h6,
 }
 
 
-/*-----------------------
----- Preloader Styles ----
--------------------------*/
 
 #page-loader {
     position: fixed;
@@ -144,9 +124,6 @@ h6,
 }
 
 
-/*-----------------------
----- Color options ----
--------------------------*/
 
 #color-options {
     width: 130px;
@@ -186,9 +163,6 @@ h6,
 }
 
 
-/*-----------------------
----- Menu Styles ----
--------------------------*/
 
 #main-nav .container {
     padding: 0 0 20px;
@@ -290,10 +264,6 @@ h6,
 }
 
 
-/*-----------------------
----- Header Styles ----
--------------------------*/
-
 #home {
     color: #fff;
     max-width: 100%;
@@ -305,7 +275,7 @@ h6,
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: -10;
+    z-index: -1;
 }
 
 .backstretch img {
@@ -323,9 +293,7 @@ h6,
 
 .hello {
     -ms-transform: rotate(-7deg);
-    /* IE 9 */
     -webkit-transform: rotate(-7deg);
-    /* Chrome, Safari, Opera */
     transform: rotate(-7deg);
     z-index: 1;
 }
@@ -364,10 +332,6 @@ h6,
 }
 
 
-/*-----------------------
---- About Styles ----
--------------------------*/
-
 #about {
     padding-top: 50px;
     z-index: 3;
@@ -384,9 +348,7 @@ h6,
     margin-bottom: 120px;
     width: 100%;
     -ms-transform: rotate(7deg);
-    /* IE 9 */
     -webkit-transform: rotate(7deg);
-    /* Chrome, Safari, Opera */
     transform: rotate(7deg);
 }
 
@@ -454,10 +416,6 @@ h6,
 }
 
 
-/*-----------------------
---- Skills Styles ----
--------------------------*/
-
 #skills {
     padding-top: 60px;
     padding-bottom: 120px;
@@ -510,10 +468,6 @@ h6,
     margin-top: 30px;
 }
 
-
-/*-----------------------
---- Portfolio Styles ----
--------------------------*/
 
 #portfolio {
     padding-top: 70px;
@@ -654,9 +608,7 @@ h6,
     border: 5px solid #fff;
     color: #fff;
     -ms-transform: rotate(-3deg);
-    /* IE 9 */
     -webkit-transform: rotate(-3deg);
-    /* Chrome, Safari, Opera */
     transform: rotate(-3deg);
     position: absolute;
 }
@@ -729,11 +681,6 @@ h6,
     margin-bottom: 5px;
 }
 
-
-/*----------------------
------ Contact Styles ----
-------------------------*/
-
 #contact {
     background-color: #fff;
     padding-top: 70px;
@@ -787,11 +734,6 @@ h6,
     border-radius: 50% 50% 50% 50%;
 }
 
-
-/*-------------------
----- GMap Styles ----
----------------------*/
-
 #gmap {
     display: block;
     width: 100%;
@@ -800,11 +742,6 @@ h6,
     border-radius: 50% 50% 0 50%;
     border: 10px solid #2C98F0;
 }
-
-
-/*----------------------
------ Footer Styles ----
-------------------------*/
 
 #main-footer {
     padding-top: 50px;
@@ -852,11 +789,6 @@ h6,
     background: #2C98F0;
     border-radius: 50% 50% 50% 50%;
 }
-
-
-/*----------------------
------ Media Queries ----
-------------------------*/
 
 @media (max-width:1199px) {
     #gmap {
@@ -948,9 +880,7 @@ h6,
         padding-top: 30px;
         padding-bottom: 60px;
         -ms-transform: rotate(5deg);
-        /* IE 9 */
         -webkit-transform: rotate(5deg);
-        /* Chrome, Safari, Opera */
         transform: rotate(5deg);
     }
     #skills .skill10 {
@@ -1048,9 +978,6 @@ h6,
         text-align: center;
         background-color: #ffffff;
         background: url(smalltop.png)!important;
-        /* background-attachment: fixed!important;
-				background-position: center!important;
-				background-repeat: no-repeat!important; */
         background-size: contain!important;
         z-index: -10;
     }
